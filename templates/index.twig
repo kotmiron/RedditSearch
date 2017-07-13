@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Reddit Search Table</title>
+
+    <link rel="stylesheet" type="text/css" href="resources/style.css">
+</head>
+<body>
+
+    <table id='posts'>
+        <tr>
+            <th>Thumbnail</th>
+	        <th>Title</th>
+	        <th>Ups</th>
+	        <th>Downs</th>
+	        <th>Created At</th>
+	        <th>Subreddit</th>
+	        <th>Link</th>
+            <th>Url</th>
+            <th>Domain</th>
+        </tr>
+
+        {% for item in results %}
+
+	        <tr>
+                <td><img src="{{ item.data.thumbnail }}"></td>
+	            <td>{{ item.data.title }}</td>
+	            <td>{{ item.data.ups }}</td>
+	            <td>{{ item.data.downs }}</td>
+	            <td>{{ item.data.created_utc|date("d.m.Y") }}</td>
+	            <td>{{ item.data.subreddits }}</td>
+	            <td><a href="https://www.reddit.com{{ item.data.permalink }}" target="_blank">{{ item.data.permalink }}</a></td>
+                <td><a href="{{ item.data.url }}" target="_blank">{{ item.data.url }}</a></td>
+                <td>{{ item.data.domain }}</td>
+	        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>

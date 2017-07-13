@@ -1,0 +1,16 @@
+body {
+    font-family: Helvetica, Arial, sans-serif
+}
+
+#posts td, #posts th {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+}
+
+#posts th {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background-color: #4CAF50;
+    color: white;
+}

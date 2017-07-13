@@ -1,0 +1,11 @@
+/src/Authenticator.php
+/tests
+/vendor
+composer.lock
+composer.phar
+data.txt
+Article.md
+README.md
+oauth.php
+phpunit.xml
+.travis.yml
